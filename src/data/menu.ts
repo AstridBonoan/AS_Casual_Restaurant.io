@@ -1,0 +1,150 @@
+import type { MenuItem, Promotion } from '../types'
+
+export const MENU_ITEMS: MenuItem[] = [
+  {
+    id: 'teriyaki-fire',
+    name: 'Teriyaki Fire Bowl',
+    description: 'Grilled chicken, jasmine rice, charred broccoli, sesame glaze.',
+    price: 12.5,
+    category: 'bowls',
+    popular: true,
+    imageGradient: 'from-orange-500 to-amber-600',
+  },
+  {
+    id: 'harvest-greens',
+    name: 'Harvest Greens Bowl',
+    description: 'Quinoa, roasted squash, kale, goat cheese, maple vinaigrette.',
+    price: 11.75,
+    category: 'bowls',
+    vegan: true,
+    imageGradient: 'from-emerald-500 to-lime-600',
+  },
+  {
+    id: 'chipotle-ranch',
+    name: 'Chipotle Ranch Bowl',
+    description: 'Steak, cilantro rice, black beans, pico, lime crema.',
+    price: 13.25,
+    category: 'bowls',
+    spicy: true,
+    popular: true,
+    imageGradient: 'from-red-500 to-orange-600',
+  },
+  {
+    id: 'citrus-salmon',
+    name: 'Citrus Salmon Bowl',
+    description: 'Atlantic salmon, wild rice, avocado, pickled onion, yuzu.',
+    price: 14.5,
+    category: 'bowls',
+    imageGradient: 'from-sky-500 to-cyan-600',
+  },
+  {
+    id: 'crunch-chicken',
+    name: 'Crunch Chicken Wrap',
+    description: 'Crispy chicken, slaw, pickles, ranch — pressed & ready.',
+    price: 10.5,
+    category: 'wraps',
+    popular: true,
+    imageGradient: 'from-amber-400 to-orange-500',
+  },
+  {
+    id: 'falafel-pita',
+    name: 'Falafel Street Wrap',
+    description: 'House falafel, hummus, cucumber, tahini, warm pita.',
+    price: 9.75,
+    category: 'wraps',
+    vegan: true,
+    imageGradient: 'from-green-500 to-teal-600',
+  },
+  {
+    id: 'bbq-brisket',
+    name: 'BBQ Brisket Wrap',
+    description: 'Slow brisket, coleslaw, pickled jalapeños, smoky sauce.',
+    price: 11.95,
+    category: 'wraps',
+    spicy: true,
+    imageGradient: 'from-stone-600 to-amber-800',
+  },
+  {
+    id: 'sweet-potato',
+    name: 'Sweet Potato Fries',
+    description: 'Crispy wedges, chipotle aioli — shareable size.',
+    price: 4.5,
+    category: 'sides',
+    vegan: true,
+    imageGradient: 'from-orange-400 to-red-500',
+  },
+  {
+    id: 'street-corn',
+    name: 'Street Corn Cup',
+    description: 'Elote-style cup with cotija, chili, lime.',
+    price: 3.95,
+    category: 'sides',
+    imageGradient: 'from-yellow-400 to-amber-500',
+  },
+  {
+    id: 'agua-fresca',
+    name: 'Mango Agua Fresca',
+    description: 'House-made, lightly sweetened — 16oz.',
+    price: 3.25,
+    category: 'drinks',
+    vegan: true,
+    imageGradient: 'from-pink-400 to-orange-400',
+  },
+  {
+    id: 'cold-brew',
+    name: 'Vanilla Cold Brew',
+    description: 'Nitro-style cold brew with oat milk — 12oz.',
+    price: 4.25,
+    category: 'drinks',
+    vegan: true,
+    imageGradient: 'from-amber-800 to-stone-900',
+  },
+  {
+    id: 'sparkling',
+    name: 'Citrus Sparkling',
+    description: 'Zero-sugar grapefruit sparkling — 12oz can.',
+    price: 2.95,
+    category: 'drinks',
+    vegan: true,
+    imageGradient: 'from-rose-400 to-red-500',
+  },
+]
+
+export const PROMOTIONS: Promotion[] = [
+  {
+    id: 'welcome15',
+    code: 'WELCOME15',
+    title: '15% off your first order',
+    description: 'New guests save on bowls, wraps, and sides.',
+    discountPercent: 15,
+    badge: 'New',
+  },
+  {
+    id: 'pickup10',
+    code: 'PICKUP10',
+    title: '10% off pickup orders',
+    description: 'Skip the delivery fee — grab curbside in 12 min.',
+    discountPercent: 10,
+    minSubtotal: 18,
+    badge: 'Pickup',
+  },
+  {
+    id: 'lunch8',
+    code: 'LUNCH8',
+    title: '8% off before 2pm',
+    description: 'Weekday lunch rush reward. Mon–Fri only.',
+    discountPercent: 8,
+    badge: 'Lunch',
+  },
+]
+
+export const CATEGORY_LABELS: Record<MenuItem['category'], string> = {
+  bowls: 'Signature Bowls',
+  wraps: 'Hot Wraps',
+  sides: 'Sides',
+  drinks: 'Drinks',
+}
+
+export const DELIVERY_FEE = 3.49
+export const PICKUP_ESTIMATE = '12–18 min'
+export const DELIVERY_ESTIMATE = '28–40 min'
