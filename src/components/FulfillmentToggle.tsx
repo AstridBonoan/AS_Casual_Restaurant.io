@@ -11,7 +11,10 @@ export function FulfillmentToggle() {
   const { fulfillment, setFulfillment } = useOrder()
 
   return (
-    <section className="mx-auto max-w-lg px-4 sm:max-w-2xl lg:max-w-4xl" aria-label="Fulfillment method">
+    <section
+      className="relative z-10 mx-auto max-w-lg px-4 sm:max-w-2xl lg:max-w-4xl"
+      aria-label="Fulfillment method"
+    >
       <div className="grid grid-cols-2 gap-2 rounded-2xl bg-white p-1.5 shadow-sm ring-1 ring-stone-200">
         {options.map((opt) => {
           const active = fulfillment === opt.id

@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-amber-500 px-4 pb-10 pt-6 text-white sm:px-6"
+      className="relative isolate overflow-x-clip bg-gradient-to-br from-brand-600 via-brand-500 to-amber-500 px-4 pb-8 pt-6 text-white sm:px-6"
     >
       <div className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-32 w-32 rounded-full bg-black/10 blur-2xl" />

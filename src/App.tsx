@@ -15,7 +15,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <div className="-mt-6 space-y-8">
+        <div className="relative z-10 space-y-8 pt-4">
           <FulfillmentToggle />
           <PromoSection />
           <MenuSection />
