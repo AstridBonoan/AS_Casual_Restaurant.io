@@ -1,5 +1,5 @@
 import type { MenuItem } from '../types'
-import { useOrder } from '../context/OrderContext'
+import { useOrder } from '../context/useOrder'
 import { formatPrice } from '../utils/format'
 
 interface Props {

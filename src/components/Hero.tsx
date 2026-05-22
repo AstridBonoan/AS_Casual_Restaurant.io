@@ -1,5 +1,5 @@
 import { DELIVERY_ESTIMATE, PICKUP_ESTIMATE } from '../data/menu'
-import { useOrder } from '../context/OrderContext'
+import { useOrder } from '../context/useOrder'
 
 export function Hero() {
   const { fulfillment } = useOrder()

@@ -1,5 +1,5 @@
 import { PROMOTIONS } from '../data/menu'
-import { useOrder } from '../context/OrderContext'
+import { useOrder } from '../context/useOrder'
 
 export function PromoSection() {
   const { applyPromo, appliedPromo } = useOrder()

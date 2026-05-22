@@ -1,4 +1,4 @@
-import { useOrder } from '../context/OrderContext'
+import { useOrder } from '../context/useOrder'
 import { formatPrice } from '../utils/format'
 
 export function OrderBar() {

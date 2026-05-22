@@ -1,39 +1,12 @@
 import {
-  createContext,
   useCallback,
-  useContext,
   useMemo,
   useState,
   type ReactNode,
 } from 'react'
 import { DELIVERY_FEE, PROMOTIONS } from '../data/menu'
 import type { CartLine, Fulfillment, MenuItem } from '../types'
-
-interface OrderContextValue {
-  fulfillment: Fulfillment
-  setFulfillment: (mode: Fulfillment) => void
-  cart: CartLine[]
-  addItem: (item: MenuItem) => void
-  removeItem: (itemId: string) => void
-  updateQuantity: (itemId: string, quantity: number) => void
-  clearCart: () => void
-  promoCode: string
-  setPromoCode: (code: string) => void
-  appliedPromo: (typeof PROMOTIONS)[number] | null
-  applyPromo: (code: string) => boolean
-  itemCount: number
-  subtotal: number
-  discount: number
-  fees: number
-  total: number
-  showCart: boolean
-  setShowCart: (open: boolean) => void
-  orderPlaced: boolean
-  placeOrder: () => void
-  resetOrder: () => void
-}
-
-const OrderContext = createContext<OrderContextValue | null>(null)
+import { OrderContext, type OrderContextValue } from './order-context'
 
 export function OrderProvider({ children }: { children: ReactNode }) {
   const [fulfillment, setFulfillment] = useState<Fulfillment>('pickup')
@@ -152,10 +125,4 @@ export function OrderProvider({ children }: { children: ReactNode }) {
   return (
     <OrderContext.Provider value={value}>{children}</OrderContext.Provider>
   )
-}
-
-export function useOrder() {
-  const ctx = useContext(OrderContext)
-  if (!ctx) throw new Error('useOrder must be used within OrderProvider')
-  return ctx
 }

@@ -1,4 +1,4 @@
-import { useOrder } from '../context/OrderContext'
+import { useOrder } from '../context/useOrder'
 
 export function Header() {
   const { itemCount, setShowCart } = useOrder()
